@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject private var model = SonosModel()
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")

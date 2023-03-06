@@ -11,6 +11,12 @@
 		929F737F29B6781400181D74 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F737E29B6781400181D74 /* ContentView.swift */; };
 		929F738129B6781600181D74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 929F738029B6781600181D74 /* Assets.xcassets */; };
 		929F738429B6781600181D74 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 929F738329B6781600181D74 /* Preview Assets.xcassets */; };
+		929F738F29B67D1B00181D74 /* SonosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F738E29B67D1B00181D74 /* SonosModel.swift */; };
+		929F739329B67FDF00181D74 /* SSDPSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F739229B67FDF00181D74 /* SSDPSession.swift */; };
+		929F739529B6811900181D74 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 929F739429B6811900181D74 /* README.md */; };
+		929F739829B6887D00181D74 /* SonosDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F739729B6887D00181D74 /* SonosDevice.swift */; };
+		929F739A29B688AF00181D74 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F739929B688AF00181D74 /* Helpers.swift */; };
+		929F739C29B68A8300181D74 /* SSDPParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F739B29B68A8300181D74 /* SSDPParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +26,12 @@
 		929F738029B6781600181D74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		929F738329B6781600181D74 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		929F738529B6781600181D74 /* SonosAPIDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SonosAPIDemo.entitlements; sourceTree = "<group>"; };
+		929F738E29B67D1B00181D74 /* SonosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonosModel.swift; sourceTree = "<group>"; };
+		929F739229B67FDF00181D74 /* SSDPSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSDPSession.swift; sourceTree = "<group>"; };
+		929F739429B6811900181D74 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		929F739729B6887D00181D74 /* SonosDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonosDevice.swift; sourceTree = "<group>"; };
+		929F739929B688AF00181D74 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		929F739B29B68A8300181D74 /* SSDPParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDPParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +48,7 @@
 		929F737029B6781400181D74 = {
 			isa = PBXGroup;
 			children = (
+				929F739429B6811900181D74 /* README.md */,
 				929F737B29B6781400181D74 /* SonosAPIDemo */,
 				929F737A29B6781400181D74 /* Products */,
 			);
@@ -52,6 +65,9 @@
 		929F737B29B6781400181D74 /* SonosAPIDemo */ = {
 			isa = PBXGroup;
 			children = (
+				929F738B29B67C2200181D74 /* Model */,
+				929F738C29B67C5700181D74 /* Network */,
+				929F738D29B67C6E00181D74 /* Utilities */,
 				929F737C29B6781400181D74 /* SonosAPIDemoApp.swift */,
 				929F737E29B6781400181D74 /* ContentView.swift */,
 				929F738029B6781600181D74 /* Assets.xcassets */,
@@ -67,6 +83,56 @@
 				929F738329B6781600181D74 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		929F738B29B67C2200181D74 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				929F739629B6881100181D74 /* Sonos */,
+				929F738E29B67D1B00181D74 /* SonosModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		929F738C29B67C5700181D74 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				929F739029B67F5900181D74 /* SOAP */,
+				929F739129B67F6600181D74 /* SSDP */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		929F738D29B67C6E00181D74 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				929F739929B688AF00181D74 /* Helpers.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		929F739029B67F5900181D74 /* SOAP */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SOAP;
+			sourceTree = "<group>";
+		};
+		929F739129B67F6600181D74 /* SSDP */ = {
+			isa = PBXGroup;
+			children = (
+				929F739B29B68A8300181D74 /* SSDPParser.swift */,
+				929F739229B67FDF00181D74 /* SSDPSession.swift */,
+			);
+			path = SSDP;
+			sourceTree = "<group>";
+		};
+		929F739629B6881100181D74 /* Sonos */ = {
+			isa = PBXGroup;
+			children = (
+				929F739729B6887D00181D74 /* SonosDevice.swift */,
+			);
+			path = Sonos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +193,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				929F739529B6811900181D74 /* README.md in Resources */,
 				929F738429B6781600181D74 /* Preview Assets.xcassets in Resources */,
 				929F738129B6781600181D74 /* Assets.xcassets in Resources */,
 			);
@@ -139,8 +206,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				929F739829B6887D00181D74 /* SonosDevice.swift in Sources */,
+				929F739A29B688AF00181D74 /* Helpers.swift in Sources */,
+				929F739C29B68A8300181D74 /* SSDPParser.swift in Sources */,
 				929F737F29B6781400181D74 /* ContentView.swift in Sources */,
 				929F737D29B6781400181D74 /* SonosAPIDemoApp.swift in Sources */,
+				929F739329B67FDF00181D74 /* SSDPSession.swift in Sources */,
+				929F738F29B67D1B00181D74 /* SonosModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +346,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -301,6 +374,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

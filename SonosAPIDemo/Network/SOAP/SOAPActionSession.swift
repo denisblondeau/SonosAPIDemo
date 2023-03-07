@@ -8,7 +8,6 @@
 import Combine
 import Foundation
 
-
 /// Sonos Service Action.
 final class SOAPActionSession {
     
@@ -25,6 +24,7 @@ final class SOAPActionSession {
                 
             case .dataDecoding(let errorMessage):
                 return errorMessage
+                
             case .urlRequest(let statusCode):
                 return "Cannot retrieve data from host. HTTP response code: \(statusCode)"
             }
@@ -35,7 +35,6 @@ final class SOAPActionSession {
         case avTransport(action: AVTransportAction, url: URL)
         case zoneGroupTopology(action: ZoneGroupTopologyAction, url: URL)
         
-        
         var action: String {
             switch self {
                 
@@ -44,7 +43,6 @@ final class SOAPActionSession {
                 
             case .zoneGroupTopology(let action, _):
                 return action.rawValue.capitalizingFirstLetter()
-                
             }
         }
         
@@ -108,7 +106,6 @@ final class SOAPActionSession {
     private var service: Service
     let onDataReceived = PassthroughSubject<String, SOAPActionError>()
     
-    
     init(service: Service) {
         self.service = service
     }
@@ -169,11 +166,11 @@ final class SOAPActionSession {
           
             onDataReceived.send(jsonStr)
             onDataReceived.send(completion: .finished)
-            
-            
         }
     }
 }
+
+// MARK: - Shared enums
 
 enum AVTransportAction: String {
     case getPositionInfo

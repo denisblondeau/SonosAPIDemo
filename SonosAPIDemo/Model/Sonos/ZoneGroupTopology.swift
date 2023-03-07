@@ -53,15 +53,15 @@ struct ZoneGroup: Codable {
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.coordinator = try container.decode(String.self, forKey: .coordinator)
-        self.id = try container.decode(String.self, forKey: .id)
+        coordinator = try container.decode(String.self, forKey: .coordinator)
+        id = try container.decode(String.self, forKey: .id)
         if let x = try? container.decode([ZoneGroupMember].self, forKey: .zoneGroupMember) {
-            self.zoneGroupMember = x
+            zoneGroupMember = x
         } else
         if let x = try? container.decode(ZoneGroupMember.self, forKey: .zoneGroupMember) {
             var arrayZ = Array<ZoneGroupMember>()
             arrayZ.append(x)
-            self.zoneGroupMember = arrayZ
+            zoneGroupMember = arrayZ
         } else {
             throw DecodingError.typeMismatch(ZoneGroupMember.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for ZoneGroupMember"))
         }

@@ -7,9 +7,8 @@
 
 import Foundation
 
-
 // MARK: - getBaseURL
-/// Parse a full URL (URI) to its basic scheme, host name, and port number.
+/// Parse a full URL  (URI) to its basic scheme, host name, and port number.
 /// - Parameter url: URI to parse.
 /// - Returns: Basic URL.
 func getBaseURL(from url: URL) -> URL? {
@@ -24,7 +23,6 @@ func getBaseURL(from url: URL) -> URL? {
                 }
                 if let url =  URL(string: baseURL) {
                     return url
-                    
                 }
             }
         }
@@ -33,12 +31,13 @@ func getBaseURL(from url: URL) -> URL? {
 }
 
 // MARK: - parseJSONToObject
-/// Parse json data to a known object.
+/// Parse JSON data to a known object.
 /// - Parameters:
 ///   - json: JSON data to decode.
 ///   - completion: New struct of type T or nil if decoding error.
 func parseJSONToObject<T: Decodable>(json: String, completion: @escaping (T?) -> ())  {
     
+    // Set to true to view debug information (JSON decoding failure).
     let debug = true
     var errorMessage = ""
     

@@ -20,7 +20,7 @@ final class ActionParser {
         case ZoneGroupTopologyAction.getZoneGroupState.rawValue.capitalizingFirstLetter():
             let parser = ParseXMLToJSON(xml: sourceXML)
             return parser.parseXML()
-
+            
         default:
             return nil
         }
@@ -37,7 +37,7 @@ final class ActionParser {
         for (index, node) in children.enumerated() {
             
             guard let key = node.name, let value = node.stringValue else { continue }
-          
+            
             if value.prefix(1) == "<" {
                 
                 json += "\"\(key)\": {"
@@ -69,7 +69,7 @@ final class ActionParser {
             var json = ""
             let child = children[0]
             
-            guard let children = child.children else { return nil}
+            guard let children = child.children else { return nil }
             
             for (index, child) in children.enumerated() {
                 
@@ -84,7 +84,6 @@ final class ActionParser {
             }
             return json
         }
-        
     }
 }
 

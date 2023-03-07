@@ -7,6 +7,8 @@
 
 import Foundation
 
+
+/// Parse XML to JSON.
 final class ParseXMLToJSON {
     
     private var xmlDoc: XMLDocument!
@@ -33,12 +35,9 @@ final class ParseXMLToJSON {
                 return json
             }
         }
-        
         return nil
-        
     }
 }
-
 
 /* Following xslt is from: https://github.com/JayDaley/XML-to-JSON-in-XSLT
  XML to JSON in XSLT - A toolkit for converting XML to JSON using XSLT

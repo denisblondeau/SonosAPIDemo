@@ -71,7 +71,6 @@ final class SSDPSession {
         }
     }
     
-    
     /// Send multicast request. (Discovery message)
     private func sendRequest() {
         
@@ -84,7 +83,6 @@ final class SSDPSession {
         }
     }
     
-    
     /// Set up the multicast broadcast.
     private func setup() throws {
         
@@ -95,8 +93,8 @@ final class SSDPSession {
             onDeviceFound.send(completion: .failure(.genericError("\(#function) - Cannot create connection group.")))
             return
         }
+        
         group?.setReceiveHandler(maximumMessageSize:  4096, rejectOversizedMessages: true) {  (message, content, isComplete) in
-            
             
             if let content {
                 let parser = SSDPParser(content)

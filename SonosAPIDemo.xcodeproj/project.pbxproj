@@ -17,6 +17,10 @@
 		929F739829B6887D00181D74 /* SonosDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F739729B6887D00181D74 /* SonosDevice.swift */; };
 		929F739A29B688AF00181D74 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F739929B688AF00181D74 /* Helpers.swift */; };
 		929F739C29B68A8300181D74 /* SSDPParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F739B29B68A8300181D74 /* SSDPParser.swift */; };
+		929F739E29B6B5FD00181D74 /* SOAPActionSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F739D29B6B5FD00181D74 /* SOAPActionSession.swift */; };
+		929F73A029B6B6C400181D74 /* ActionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F739F29B6B6C400181D74 /* ActionParser.swift */; };
+		929F73A229B6B71C00181D74 /* ParseXMLToJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F73A129B6B71C00181D74 /* ParseXMLToJSON.swift */; };
+		929F73A429B6B80400181D74 /* ZoneGroupTopology.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F73A329B6B80400181D74 /* ZoneGroupTopology.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		929F739729B6887D00181D74 /* SonosDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonosDevice.swift; sourceTree = "<group>"; };
 		929F739929B688AF00181D74 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		929F739B29B68A8300181D74 /* SSDPParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDPParser.swift; sourceTree = "<group>"; };
+		929F739D29B6B5FD00181D74 /* SOAPActionSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOAPActionSession.swift; sourceTree = "<group>"; };
+		929F739F29B6B6C400181D74 /* ActionParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionParser.swift; sourceTree = "<group>"; };
+		929F73A129B6B71C00181D74 /* ParseXMLToJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseXMLToJSON.swift; sourceTree = "<group>"; };
+		929F73A329B6B80400181D74 /* ZoneGroupTopology.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoneGroupTopology.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +114,9 @@
 		929F738D29B67C6E00181D74 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				929F739F29B6B6C400181D74 /* ActionParser.swift */,
 				929F739929B688AF00181D74 /* Helpers.swift */,
+				929F73A129B6B71C00181D74 /* ParseXMLToJSON.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -114,6 +124,7 @@
 		929F739029B67F5900181D74 /* SOAP */ = {
 			isa = PBXGroup;
 			children = (
+				929F739D29B6B5FD00181D74 /* SOAPActionSession.swift */,
 			);
 			path = SOAP;
 			sourceTree = "<group>";
@@ -131,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				929F739729B6887D00181D74 /* SonosDevice.swift */,
+				929F73A329B6B80400181D74 /* ZoneGroupTopology.swift */,
 			);
 			path = Sonos;
 			sourceTree = "<group>";
@@ -206,13 +218,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				929F73A429B6B80400181D74 /* ZoneGroupTopology.swift in Sources */,
 				929F739829B6887D00181D74 /* SonosDevice.swift in Sources */,
 				929F739A29B688AF00181D74 /* Helpers.swift in Sources */,
 				929F739C29B68A8300181D74 /* SSDPParser.swift in Sources */,
 				929F737F29B6781400181D74 /* ContentView.swift in Sources */,
+				929F73A229B6B71C00181D74 /* ParseXMLToJSON.swift in Sources */,
 				929F737D29B6781400181D74 /* SonosAPIDemoApp.swift in Sources */,
 				929F739329B67FDF00181D74 /* SSDPSession.swift in Sources */,
 				929F738F29B67D1B00181D74 /* SonosModel.swift in Sources */,
+				929F739E29B6B5FD00181D74 /* SOAPActionSession.swift in Sources */,
+				929F73A029B6B6C400181D74 /* ActionParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

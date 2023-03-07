@@ -1,6 +1,6 @@
 //
 //  SSDPParser.swift
-//  TestSonosAPI
+//  SonosAPIDemo
 //
 //  Created by Denis Blondeau on 2023-01-11.
 //

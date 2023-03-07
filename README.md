@@ -11,7 +11,7 @@ Note: As this uses an unofficial API, this application may break at any time. Yo
 
 This demo:
 - Retrieves all Sonos devices on the local network.
-- Display the zones (consisting of Sonos speakers) in the local household.
+- Display the groups (consisting of Sonos speakers) in the local household.
 - Display the media image for the selected zone with various details (e.g. track title, track length, etc.)
 - Subscribe to Sonos events (e.g. volume change, etc.)
 

@@ -62,7 +62,7 @@ final class SSDPSession {
         do {
             try setup()
             
-            // Wait 1 sec. for multicast replys than cancel the request.
+            // Wait 1 sec. for multicast replies than cancel the request.
             Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { timer in
                 self.group?.cancel()
                 self.onDeviceFound.send(completion: .finished)

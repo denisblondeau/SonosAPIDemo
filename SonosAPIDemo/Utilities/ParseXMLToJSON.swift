@@ -11,7 +11,6 @@ final class ParseXMLToJSON {
     
     private var xmlDoc: XMLDocument!
     
-    
     init(xml: String) {
         
         let doc  = try? XMLDocument(xmlString: xml)
@@ -20,7 +19,6 @@ final class ParseXMLToJSON {
         } else {
             xmlDoc = nil
         }
-        
     }
     
     func parseXML() -> String? {

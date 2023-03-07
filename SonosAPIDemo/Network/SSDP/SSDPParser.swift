@@ -8,7 +8,6 @@
 import Combine
 import Foundation
 
-
 /// Parse SSDP data  to JSON and then to a SonosDevice object.
 final class SSDPParser {
     

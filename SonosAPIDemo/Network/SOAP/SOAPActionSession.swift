@@ -8,6 +8,8 @@
 import Combine
 import Foundation
 
+
+/// Sonos Service Action.
 final class SOAPActionSession {
     
     // MARK: - Enums Start
@@ -111,16 +113,14 @@ final class SOAPActionSession {
         self.service = service
     }
     
+    /// Execute the specified action.
     func run() {
         
         let soapBody = "<?xml version='1.0' encoding='utf-8'?><s:Envelope xmlns:s='http://schemas.xmlsoap.org/soap/envelope/' s:encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'><s:Body>\(service.actionBody)</s:Body></s:Envelope>"
-        
-
+    
         let length = soapBody.count
         let soapAction = service.serviceType + service.action
-      
-      
-        
+     
         Task {
             var request = URLRequest(url: service.controlURL)
         

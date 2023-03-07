@@ -55,7 +55,6 @@ final class SSDPSession {
     
     let onDeviceFound = PassthroughSubject<SonosDevice, SSDPError>()
     
-    
     /// Initiates multicast request.
     func run() throws {
         

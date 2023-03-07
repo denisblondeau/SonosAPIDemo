@@ -54,6 +54,13 @@ struct ContentView: View {
                 .frame(width: 600, height: 600)
                 .padding()
                 
+                VStack {
+                    ProgressView(value: Double(model.groupVolume), total: 100)
+                        .padding([.leading, .trailing])
+                    Text("Group Volume: \(model.groupVolume)")
+                   
+                }
+               
                 Spacer()
                 
                 if let currentTrack = model.currentTrack {

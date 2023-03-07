@@ -28,6 +28,8 @@ final class SonosModel: ObservableObject {
     @Published private(set) var albumArtURL: URL?
     @Published private(set) var currentTrack: CurrentTrack?
     @Published private(set) var currentTrackPosition: Date?
+    @Published private(set) var groupVolume = 0
+    
     
     // MARK: - Set the callback URL to the URL of the computer running this demo. Default port is 1337 - or use another available port on your computer.
     private var callbackURL = URL(string: "http://192.168.2.17:1337")
@@ -61,7 +63,7 @@ final class SonosModel: ObservableObject {
             switch completion {
                 
             case .failure(let error):
-                fatalError(error.description)
+                print(error.description)
                 
             case .finished:
                 // Once we have the Sonos devices, find out the groups (zones) coordinators.
@@ -217,7 +219,8 @@ final class SonosModel: ObservableObject {
                 
                 parseJSONToObject(json: jsonData.json) { (groupRenderingControl: GroupRenderingControl?) in
                     guard let groupRenderingControl else { return }
-            //        print(groupRenderingControl)
+    
+                    self.groupVolume = groupRenderingControl.groupVolume
                 }
                 
             default:

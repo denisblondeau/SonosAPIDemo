@@ -12,7 +12,7 @@ struct AVTransport: Codable {
     
     let avTransportURI, currentPlayMode, currentRecordQualityMode, currentTrackURI, currentTransportActions, currentValidPlayModes, directControlAccountID, directControlClientID, directControlIsSuspended, enqueuedTransportURI, nextAVTransportURI,nextAVTransportURIMetaData, nextTrackURI, playbackStorageMedium, possiblePlaybackStorageMedia, possibleRecordQualityModes, possibleRecordStorageMedia, recordMediumWriteStatus, recordStorageMedium, sleepTimerGeneration, transportPlaySpeed, transportState, transportStatus: String
     
-    let currentTrackMetaData: CurrentTrackMetaData
+    let currentTrackMetaData: CurrentTrackMetaData?
     let nextTrackMetaData: NextTrackMetaData?
     let avTransportURIMetaData: TransportURIMetaData?
     let enqueuedTransportURIMetaData: EnqueuedTransportURIMetaData?
@@ -77,31 +77,16 @@ struct AVTransport: Codable {
         value = try container.decode(String.self, forKey: .currentTrackDuration)
         var time = dateFormatter.date(from: value ?? "")
         currentTrackDuration = time ?? Date()
-        currentTrackMetaData = try container.decode(CurrentTrackMetaData.self, forKey: .currentTrackMetaData)
+        currentTrackMetaData = try? container.decode(CurrentTrackMetaData.self, forKey: .currentTrackMetaData)
         nextTrackURI = try container.decode(String.self, forKey: .nextTrackURI)
-        if let data = try? container.decodeIfPresent(NextTrackMetaData.self, forKey: .nextTrackMetaData) {
-            nextTrackMetaData = data
-        } else
-        if (try? container.decodeIfPresent(String.self, forKey: .nextTrackMetaData)) != nil {
-            nextTrackMetaData = nil
-        } else {
-            throw DecodingError.typeMismatch(NextTrackMetaData.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for NextTrackMetaData"))
-        }
+        nextTrackMetaData = try? container.decodeIfPresent(NextTrackMetaData.self, forKey: .nextTrackMetaData)
         enqueuedTransportURI = try container.decode(String.self, forKey: .enqueuedTransportURI)
-        if let data = try? container.decodeIfPresent(EnqueuedTransportURIMetaData.self, forKey: .enqueuedTransportURIMetaData) {
-            enqueuedTransportURIMetaData = data
-        } else {
-            enqueuedTransportURIMetaData = nil
-        }
+        enqueuedTransportURIMetaData = try? container.decodeIfPresent(EnqueuedTransportURIMetaData.self, forKey: .enqueuedTransportURIMetaData)
         value = try? container.decodeIfPresent(String.self, forKey: .playbackStorageMedium)
         playbackStorageMedium = value ?? ""
         value = try container.decodeIfPresent(String.self, forKey: .avTransportURI)
         avTransportURI = value ?? ""
-        if let data = try? container.decodeIfPresent(TransportURIMetaData.self, forKey: .avTransportURIMetaData) {
-            avTransportURIMetaData = data
-        } else {
-            avTransportURIMetaData = nil
-        }
+        avTransportURIMetaData = try? container.decodeIfPresent(TransportURIMetaData.self, forKey: .avTransportURIMetaData)
         value = try container.decodeIfPresent(String.self, forKey: .nextAVTransportURI)
         nextAVTransportURI = value ?? ""
         value = try container.decodeIfPresent(String.self, forKey: .nextAVTransportURIMetaData)
@@ -206,3 +191,4 @@ struct TransportURIMetaData: Codable {
         case desc
     }
 }
+

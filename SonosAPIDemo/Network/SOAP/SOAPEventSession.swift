@@ -362,7 +362,7 @@ final class SOAPEventSession {
             
             let httpResponse = response as! HTTPURLResponse
             
-            guard httpResponse.statusCode == 200 else {
+            guard (httpResponse.statusCode == 200) || (httpResponse.statusCode == 412) else {
                 
                 onDataReceived.send(completion: .failure(.httpResponse(httpResponse.statusCode)))
                 return

@@ -206,13 +206,13 @@ final class SonosModel: ObservableObject {
                 parseJSONToObject(json: jsonData.json) { (avTransport: AVTransport?) in
                     guard let avTransport else { return }
                     
-                    if let albumURL = URL(string: self.selectedGroup.coordinatorURL.description +  avTransport.currentTrackMetaData.albumArtURI) {
+                  if let albumURL = URL(string: self.selectedGroup.coordinatorURL.description +  (avTransport.currentTrackMetaData?.albumArtURI ?? "")) {
                         self.albumArtURL = albumURL
                     } else {
                         self.albumArtURL = nil
                     }
                     
-                    self.currentTrack = CurrentTrack(title: avTransport.currentTrackMetaData.title, duration: avTransport.currentTrackDuration, artist: avTransport.currentTrackMetaData.creator, album: avTransport.currentTrackMetaData.album)
+                  self.currentTrack = CurrentTrack(title: avTransport.currentTrackMetaData?.title ?? "", duration: avTransport.currentTrackDuration, artist: avTransport.currentTrackMetaData?.creator ?? "", album: avTransport.currentTrackMetaData?.album ?? "")
                 }
                 
             case .groupRenderingControl:

@@ -86,9 +86,10 @@ struct ContentView: View {
             }
         }
         .navigationTitle("Sonos API Demo")
-        .onChange(of: groupId) { id in
-            if let id {
-                model.groupSelected(id: id)
+
+        .onChange(of: groupId, initial: true) {
+            if let groupId {
+                model.groupSelected(id: groupId)
             }
         }
     }

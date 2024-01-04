@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "sonosapi",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/denisblondeau/SonosAPI.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "445dd6eed1906e98e953a6ef499ed2514a08a133"
+      }
+    }
+  ],
+  "version" : 2
+}

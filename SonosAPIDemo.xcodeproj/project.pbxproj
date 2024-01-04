@@ -12,21 +12,9 @@
 		929F738129B6781600181D74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 929F738029B6781600181D74 /* Assets.xcassets */; };
 		929F738429B6781600181D74 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 929F738329B6781600181D74 /* Preview Assets.xcassets */; };
 		929F738F29B67D1B00181D74 /* SonosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F738E29B67D1B00181D74 /* SonosModel.swift */; };
-		929F739329B67FDF00181D74 /* SSDPSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F739229B67FDF00181D74 /* SSDPSession.swift */; };
 		929F739529B6811900181D74 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 929F739429B6811900181D74 /* README.md */; };
-		929F739829B6887D00181D74 /* SonosDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F739729B6887D00181D74 /* SonosDevice.swift */; };
-		929F739A29B688AF00181D74 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F739929B688AF00181D74 /* Helpers.swift */; };
-		929F739C29B68A8300181D74 /* SSDPParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F739B29B68A8300181D74 /* SSDPParser.swift */; };
-		929F739E29B6B5FD00181D74 /* SOAPActionSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F739D29B6B5FD00181D74 /* SOAPActionSession.swift */; };
-		929F73A029B6B6C400181D74 /* ActionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F739F29B6B6C400181D74 /* ActionParser.swift */; };
-		929F73A229B6B71C00181D74 /* ParseXMLToJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F73A129B6B71C00181D74 /* ParseXMLToJSON.swift */; };
-		929F73A429B6B80400181D74 /* ZoneGroupTopology.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F73A329B6B80400181D74 /* ZoneGroupTopology.swift */; };
-		929F73A629B6DD7E00181D74 /* SOAPEventSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F73A529B6DD7E00181D74 /* SOAPEventSession.swift */; };
-		929F73A829B6DF5700181D74 /* GetPositionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F73A729B6DF5700181D74 /* GetPositionInfo.swift */; };
-		929F73AA29B6DFA000181D74 /* EventParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F73A929B6DFA000181D74 /* EventParser.swift */; };
-		929F73AC29B77CA300181D74 /* GroupRenderingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F73AB29B77CA300181D74 /* GroupRenderingControl.swift */; };
 		929F73B029B7C07100181D74 /* Sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 929F73AF29B7C07100181D74 /* Sample.jpg */; };
-		92A1BCD72B4333DB00FB8544 /* AVTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A1BCD62B4333DB00FB8544 /* AVTransport.swift */; };
+		92A1BD202B46E11B00FB8544 /* SonosAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 92A1BD1F2B46E11B00FB8544 /* SonosAPI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,21 +25,8 @@
 		929F738329B6781600181D74 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		929F738529B6781600181D74 /* SonosAPIDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SonosAPIDemo.entitlements; sourceTree = "<group>"; };
 		929F738E29B67D1B00181D74 /* SonosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonosModel.swift; sourceTree = "<group>"; };
-		929F739229B67FDF00181D74 /* SSDPSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSDPSession.swift; sourceTree = "<group>"; };
 		929F739429B6811900181D74 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		929F739729B6887D00181D74 /* SonosDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonosDevice.swift; sourceTree = "<group>"; };
-		929F739929B688AF00181D74 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
-		929F739B29B68A8300181D74 /* SSDPParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDPParser.swift; sourceTree = "<group>"; };
-		929F739D29B6B5FD00181D74 /* SOAPActionSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOAPActionSession.swift; sourceTree = "<group>"; };
-		929F739F29B6B6C400181D74 /* ActionParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionParser.swift; sourceTree = "<group>"; };
-		929F73A129B6B71C00181D74 /* ParseXMLToJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseXMLToJSON.swift; sourceTree = "<group>"; };
-		929F73A329B6B80400181D74 /* ZoneGroupTopology.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoneGroupTopology.swift; sourceTree = "<group>"; };
-		929F73A529B6DD7E00181D74 /* SOAPEventSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOAPEventSession.swift; sourceTree = "<group>"; };
-		929F73A729B6DF5700181D74 /* GetPositionInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPositionInfo.swift; sourceTree = "<group>"; };
-		929F73A929B6DFA000181D74 /* EventParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventParser.swift; sourceTree = "<group>"; };
-		929F73AB29B77CA300181D74 /* GroupRenderingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupRenderingControl.swift; sourceTree = "<group>"; };
 		929F73AF29B7C07100181D74 /* Sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sample.jpg; sourceTree = "<group>"; };
-		92A1BCD62B4333DB00FB8544 /* AVTransport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVTransport.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92A1BD202B46E11B00FB8544 /* SonosAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,8 +63,6 @@
 			isa = PBXGroup;
 			children = (
 				929F738B29B67C2200181D74 /* Model */,
-				929F738C29B67C5700181D74 /* Network */,
-				929F738D29B67C6E00181D74 /* Utilities */,
 				929F737C29B6781400181D74 /* SonosAPIDemoApp.swift */,
 				929F737E29B6781400181D74 /* ContentView.swift */,
 				929F738029B6781600181D74 /* Assets.xcassets */,
@@ -109,60 +83,9 @@
 		929F738B29B67C2200181D74 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				929F739629B6881100181D74 /* Sonos */,
 				929F738E29B67D1B00181D74 /* SonosModel.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		929F738C29B67C5700181D74 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				929F739029B67F5900181D74 /* SOAP */,
-				929F739129B67F6600181D74 /* SSDP */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		929F738D29B67C6E00181D74 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				929F739F29B6B6C400181D74 /* ActionParser.swift */,
-				929F73A929B6DFA000181D74 /* EventParser.swift */,
-				929F739929B688AF00181D74 /* Helpers.swift */,
-				929F73A129B6B71C00181D74 /* ParseXMLToJSON.swift */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
-		929F739029B67F5900181D74 /* SOAP */ = {
-			isa = PBXGroup;
-			children = (
-				929F739D29B6B5FD00181D74 /* SOAPActionSession.swift */,
-				929F73A529B6DD7E00181D74 /* SOAPEventSession.swift */,
-			);
-			path = SOAP;
-			sourceTree = "<group>";
-		};
-		929F739129B67F6600181D74 /* SSDP */ = {
-			isa = PBXGroup;
-			children = (
-				929F739B29B68A8300181D74 /* SSDPParser.swift */,
-				929F739229B67FDF00181D74 /* SSDPSession.swift */,
-			);
-			path = SSDP;
-			sourceTree = "<group>";
-		};
-		929F739629B6881100181D74 /* Sonos */ = {
-			isa = PBXGroup;
-			children = (
-				92A1BCD62B4333DB00FB8544 /* AVTransport.swift */,
-				929F73A729B6DF5700181D74 /* GetPositionInfo.swift */,
-				929F73AB29B77CA300181D74 /* GroupRenderingControl.swift */,
-				929F739729B6887D00181D74 /* SonosDevice.swift */,
-				929F73A329B6B80400181D74 /* ZoneGroupTopology.swift */,
-			);
-			path = Sonos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +104,9 @@
 			dependencies = (
 			);
 			name = SonosAPIDemo;
+			packageProductDependencies = (
+				92A1BD1F2B46E11B00FB8544 /* SonosAPI */,
+			);
 			productName = SonosAPIDemo;
 			productReference = 929F737929B6781400181D74 /* SonosAPIDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -209,6 +135,9 @@
 				Base,
 			);
 			mainGroup = 929F737029B6781400181D74;
+			packageReferences = (
+				92A1BD1E2B46E11B00FB8544 /* XCRemoteSwiftPackageReference "SonosAPI" */,
+			);
 			productRefGroup = 929F737A29B6781400181D74 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -237,22 +166,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92A1BCD72B4333DB00FB8544 /* AVTransport.swift in Sources */,
-				929F73A429B6B80400181D74 /* ZoneGroupTopology.swift in Sources */,
-				929F739829B6887D00181D74 /* SonosDevice.swift in Sources */,
-				929F739A29B688AF00181D74 /* Helpers.swift in Sources */,
-				929F739C29B68A8300181D74 /* SSDPParser.swift in Sources */,
 				929F737F29B6781400181D74 /* ContentView.swift in Sources */,
-				929F73A229B6B71C00181D74 /* ParseXMLToJSON.swift in Sources */,
 				929F737D29B6781400181D74 /* SonosAPIDemoApp.swift in Sources */,
-				929F73AA29B6DFA000181D74 /* EventParser.swift in Sources */,
-				929F73A829B6DF5700181D74 /* GetPositionInfo.swift in Sources */,
-				929F739329B67FDF00181D74 /* SSDPSession.swift in Sources */,
 				929F738F29B67D1B00181D74 /* SonosModel.swift in Sources */,
-				929F739E29B6B5FD00181D74 /* SOAPActionSession.swift in Sources */,
-				929F73A629B6DD7E00181D74 /* SOAPEventSession.swift in Sources */,
-				929F73AC29B77CA300181D74 /* GroupRenderingControl.swift in Sources */,
-				929F73A029B6B6C400181D74 /* ActionParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,7 +227,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -367,7 +283,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -456,6 +372,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		92A1BD1E2B46E11B00FB8544 /* XCRemoteSwiftPackageReference "SonosAPI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/denisblondeau/SonosAPI.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		92A1BD1F2B46E11B00FB8544 /* SonosAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 92A1BD1E2B46E11B00FB8544 /* XCRemoteSwiftPackageReference "SonosAPI" */;
+			productName = SonosAPI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 929F737129B6781400181D74 /* Project object */;
 }

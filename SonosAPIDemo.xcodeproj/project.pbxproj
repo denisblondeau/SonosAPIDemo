@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		920C04DE2B5006EF00D94D5C /* SonosAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 920C04DD2B5006EF00D94D5C /* SonosAPI */; };
+		92171F142B52B3BE00000250 /* SonosAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 92171F132B52B3BE00000250 /* SonosAPI */; };
+		92171F172B52B41200000250 /* SonosAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 92171F162B52B41200000250 /* SonosAPI */; };
 		929F737D29B6781400181D74 /* SonosAPIDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F737C29B6781400181D74 /* SonosAPIDemoApp.swift */; };
 		929F737F29B6781400181D74 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F737E29B6781400181D74 /* ContentView.swift */; };
 		929F738129B6781600181D74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 929F738029B6781600181D74 /* Assets.xcassets */; };
@@ -14,7 +17,7 @@
 		929F738F29B67D1B00181D74 /* SonosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F738E29B67D1B00181D74 /* SonosModel.swift */; };
 		929F739529B6811900181D74 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 929F739429B6811900181D74 /* README.md */; };
 		929F73B029B7C07100181D74 /* Sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 929F73AF29B7C07100181D74 /* Sample.jpg */; };
-		92A1BD202B46E11B00FB8544 /* SonosAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 92A1BD1F2B46E11B00FB8544 /* SonosAPI */; };
+		92E613DE2B5451FE00D19D41 /* SonosAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 92E613DD2B5451FE00D19D41 /* SonosAPI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +37,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92A1BD202B46E11B00FB8544 /* SonosAPI in Frameworks */,
+				92E613DE2B5451FE00D19D41 /* SonosAPI in Frameworks */,
+				92171F142B52B3BE00000250 /* SonosAPI in Frameworks */,
+				920C04DE2B5006EF00D94D5C /* SonosAPI in Frameworks */,
+				92171F172B52B41200000250 /* SonosAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +111,10 @@
 			);
 			name = SonosAPIDemo;
 			packageProductDependencies = (
-				92A1BD1F2B46E11B00FB8544 /* SonosAPI */,
+				920C04DD2B5006EF00D94D5C /* SonosAPI */,
+				92171F132B52B3BE00000250 /* SonosAPI */,
+				92171F162B52B41200000250 /* SonosAPI */,
+				92E613DD2B5451FE00D19D41 /* SonosAPI */,
 			);
 			productName = SonosAPIDemo;
 			productReference = 929F737929B6781400181D74 /* SonosAPIDemo.app */;
@@ -119,7 +128,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1510;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					929F737829B6781400181D74 = {
 						CreatedOnToolsVersion = 14.2;
@@ -136,7 +145,7 @@
 			);
 			mainGroup = 929F737029B6781400181D74;
 			packageReferences = (
-				92A1BD1E2B46E11B00FB8544 /* XCRemoteSwiftPackageReference "SonosAPI" */,
+				92E613DC2B5451FE00D19D41 /* XCRemoteSwiftPackageReference "SonosAPI" */,
 			);
 			productRefGroup = 929F737A29B6781400181D74 /* Products */;
 			projectDirPath = "";
@@ -179,6 +188,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -241,6 +251,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -374,20 +385,32 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		92A1BD1E2B46E11B00FB8544 /* XCRemoteSwiftPackageReference "SonosAPI" */ = {
+		92E613DC2B5451FE00D19D41 /* XCRemoteSwiftPackageReference "SonosAPI" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/denisblondeau/SonosAPI.git";
+			repositoryURL = "https://github.com/denisblondeau/SonosAPI";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = exactVersion;
+				version = 1.0.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		92A1BD1F2B46E11B00FB8544 /* SonosAPI */ = {
+		920C04DD2B5006EF00D94D5C /* SonosAPI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 92A1BD1E2B46E11B00FB8544 /* XCRemoteSwiftPackageReference "SonosAPI" */;
+			productName = SonosAPI;
+		};
+		92171F132B52B3BE00000250 /* SonosAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SonosAPI;
+		};
+		92171F162B52B41200000250 /* SonosAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SonosAPI;
+		};
+		92E613DD2B5451FE00D19D41 /* SonosAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 92E613DC2B5451FE00D19D41 /* XCRemoteSwiftPackageReference "SonosAPI" */;
 			productName = SonosAPI;
 		};
 /* End XCSwiftPackageProductDependency section */

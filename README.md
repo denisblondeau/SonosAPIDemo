@@ -4,6 +4,8 @@ This Swift/SwiftUI (MacOS) demo uses unsupported (i.e. unofficial) Sonos API req
 
 The Sonos API package needs to be installed - it is available here: https://github.com/denisblondeau/SonosAPI
 
+* Install the latest released (i.e. most stable) Sonos API package - the main branch is not as stable.
+
 This demo:
 - Retrieves all Sonos devices on the local network.
 - Displays the groups (consisting of Sonos speakers/devices) in the local household.
@@ -19,7 +21,7 @@ Before running this demo, do not forget to set the callback URL in SonosModel. I
 
 Testing environment:
  - MacOS 14.2.1
- - Xcode 15.1
+ - Xcode 15.2
 
 
 

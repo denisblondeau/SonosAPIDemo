@@ -3,10 +3,10 @@
     {
       "identity" : "sonosapi",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/denisblondeau/SonosAPI.git",
+      "location" : "https://github.com/denisblondeau/SonosAPI",
       "state" : {
-        "branch" : "main",
-        "revision" : "445dd6eed1906e98e953a6ef499ed2514a08a133"
+        "revision" : "7ff5e143d877a4de83a6af96e64aee8c01512d86",
+        "version" : "1.0.1"
       }
     }
   ],

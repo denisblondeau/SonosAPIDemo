@@ -15,8 +15,9 @@
 		929F738129B6781600181D74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 929F738029B6781600181D74 /* Assets.xcassets */; };
 		929F738429B6781600181D74 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 929F738329B6781600181D74 /* Preview Assets.xcassets */; };
 		929F738F29B67D1B00181D74 /* SonosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F738E29B67D1B00181D74 /* SonosModel.swift */; };
-		929F739529B6811900181D74 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 929F739429B6811900181D74 /* README.md */; };
 		929F73B029B7C07100181D74 /* Sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 929F73AF29B7C07100181D74 /* Sample.jpg */; };
+		92ABB29B2B5988D900028BC2 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 92ABB29A2B5988D900028BC2 /* LICENSE.txt */; };
+		92ABB29D2B598A4000028BC2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 92ABB29C2B598A4000028BC2 /* README.md */; };
 		92E613DE2B5451FE00D19D41 /* SonosAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 92E613DD2B5451FE00D19D41 /* SonosAPI */; };
 /* End PBXBuildFile section */
 
@@ -28,8 +29,9 @@
 		929F738329B6781600181D74 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		929F738529B6781600181D74 /* SonosAPIDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SonosAPIDemo.entitlements; sourceTree = "<group>"; };
 		929F738E29B67D1B00181D74 /* SonosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonosModel.swift; sourceTree = "<group>"; };
-		929F739429B6811900181D74 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		929F73AF29B7C07100181D74 /* Sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sample.jpg; sourceTree = "<group>"; };
+		92ABB29A2B5988D900028BC2 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		92ABB29C2B598A4000028BC2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +52,8 @@
 		929F737029B6781400181D74 = {
 			isa = PBXGroup;
 			children = (
-				929F739429B6811900181D74 /* README.md */,
+				92ABB29C2B598A4000028BC2 /* README.md */,
+				92ABB29A2B5988D900028BC2 /* LICENSE.txt */,
 				929F73AF29B7C07100181D74 /* Sample.jpg */,
 				929F737B29B6781400181D74 /* SonosAPIDemo */,
 				929F737A29B6781400181D74 /* Products */,
@@ -161,9 +164,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				929F739529B6811900181D74 /* README.md in Resources */,
 				929F738429B6781600181D74 /* Preview Assets.xcassets in Resources */,
 				929F738129B6781600181D74 /* Assets.xcassets in Resources */,
+				92ABB29D2B598A4000028BC2 /* README.md in Resources */,
+				92ABB29B2B5988D900028BC2 /* LICENSE.txt in Resources */,
 				929F73B029B7C07100181D74 /* Sample.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,8 +393,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/denisblondeau/SonosAPI";
 			requirement = {
-				kind = exactVersion;
-				version = 1.0.1;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

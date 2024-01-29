@@ -15,7 +15,6 @@
 
 </p>
 </div>
-<br />
 
 ## About the Project
 

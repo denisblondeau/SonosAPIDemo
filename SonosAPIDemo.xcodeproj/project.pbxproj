@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		920C04DE2B5006EF00D94D5C /* SonosAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 920C04DD2B5006EF00D94D5C /* SonosAPI */; };
+		92136A912B67DCB4004E05FF /* SonosAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 92136A902B67DCB4004E05FF /* SonosAPI */; };
 		92171F142B52B3BE00000250 /* SonosAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 92171F132B52B3BE00000250 /* SonosAPI */; };
 		92171F172B52B41200000250 /* SonosAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 92171F162B52B41200000250 /* SonosAPI */; };
 		929F737D29B6781400181D74 /* SonosAPIDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F737C29B6781400181D74 /* SonosAPIDemoApp.swift */; };
@@ -18,7 +19,8 @@
 		929F73B029B7C07100181D74 /* Sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 929F73AF29B7C07100181D74 /* Sample.jpg */; };
 		92ABB29B2B5988D900028BC2 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 92ABB29A2B5988D900028BC2 /* LICENSE.txt */; };
 		92ABB29D2B598A4000028BC2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 92ABB29C2B598A4000028BC2 /* README.md */; };
-		92E613DE2B5451FE00D19D41 /* SonosAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 92E613DD2B5451FE00D19D41 /* SonosAPI */; };
+		92EE6F7E2B680A0E008DD5D9 /* SonosAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 92EE6F7D2B680A0E008DD5D9 /* SonosAPI */; };
+		92EE6F812B683F56008DD5D9 /* SonosAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 92EE6F802B683F56008DD5D9 /* SonosAPI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +41,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92E613DE2B5451FE00D19D41 /* SonosAPI in Frameworks */,
+				92EE6F7E2B680A0E008DD5D9 /* SonosAPI in Frameworks */,
+				92136A912B67DCB4004E05FF /* SonosAPI in Frameworks */,
+				92EE6F812B683F56008DD5D9 /* SonosAPI in Frameworks */,
 				92171F142B52B3BE00000250 /* SonosAPI in Frameworks */,
 				920C04DE2B5006EF00D94D5C /* SonosAPI in Frameworks */,
 				92171F172B52B41200000250 /* SonosAPI in Frameworks */,
@@ -117,7 +121,9 @@
 				920C04DD2B5006EF00D94D5C /* SonosAPI */,
 				92171F132B52B3BE00000250 /* SonosAPI */,
 				92171F162B52B41200000250 /* SonosAPI */,
-				92E613DD2B5451FE00D19D41 /* SonosAPI */,
+				92136A902B67DCB4004E05FF /* SonosAPI */,
+				92EE6F7D2B680A0E008DD5D9 /* SonosAPI */,
+				92EE6F802B683F56008DD5D9 /* SonosAPI */,
 			);
 			productName = SonosAPIDemo;
 			productReference = 929F737929B6781400181D74 /* SonosAPIDemo.app */;
@@ -148,7 +154,7 @@
 			);
 			mainGroup = 929F737029B6781400181D74;
 			packageReferences = (
-				92E613DC2B5451FE00D19D41 /* XCRemoteSwiftPackageReference "SonosAPI" */,
+				92EE6F7F2B683F56008DD5D9 /* XCRemoteSwiftPackageReference "SonosAPI" */,
 			);
 			productRefGroup = 929F737A29B6781400181D74 /* Products */;
 			projectDirPath = "";
@@ -389,18 +395,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		92E613DC2B5451FE00D19D41 /* XCRemoteSwiftPackageReference "SonosAPI" */ = {
+		92EE6F7F2B683F56008DD5D9 /* XCRemoteSwiftPackageReference "SonosAPI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/denisblondeau/SonosAPI";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.1;
+				branch = main;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		920C04DD2B5006EF00D94D5C /* SonosAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SonosAPI;
+		};
+		92136A902B67DCB4004E05FF /* SonosAPI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SonosAPI;
 		};
@@ -412,9 +422,13 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = SonosAPI;
 		};
-		92E613DD2B5451FE00D19D41 /* SonosAPI */ = {
+		92EE6F7D2B680A0E008DD5D9 /* SonosAPI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 92E613DC2B5451FE00D19D41 /* XCRemoteSwiftPackageReference "SonosAPI" */;
+			productName = SonosAPI;
+		};
+		92EE6F802B683F56008DD5D9 /* SonosAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 92EE6F7F2B683F56008DD5D9 /* XCRemoteSwiftPackageReference "SonosAPI" */;
 			productName = SonosAPI;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -33,7 +33,7 @@ final class SonosModel: ObservableObject {
     
     
     // MARK: - Set the callback URL to the URL of the computer running this demo. Default port is 1337 - or use another available port on your computer.
-    private var callbackURL = URL(string: "http://192.168.2.17:1337")
+    private var callbackURL = URL(string: "http://192.168.2.213:1337")
     private var eventSession: SOAPEventSession
     private var selectedGroup: SonosGroup!
     private var soapEventSubscription: AnyCancellable?
@@ -46,7 +46,7 @@ final class SonosModel: ObservableObject {
             fatalError("Error - Callback URL is invalid.")
         }
         
-        // Create event Session handler.
+        // 1) Create event Session handler.
         eventSession = SOAPEventSession(callbackURL: callbackURL)
         
         // Clean-up on app termination.
@@ -55,7 +55,7 @@ final class SonosModel: ObservableObject {
             self.soapActionSubscription?.cancel()
             self.soapEventSubscription?.cancel()
         }
-        
+        setSubscribers()
         getDevices()
     }
     
@@ -85,6 +85,50 @@ final class SonosModel: ObservableObject {
             try ssdp.run()
         } catch {
             fatalError("Cannot run SSDP session: \(error.localizedDescription)")
+        }
+    }
+    
+    /// Set up events handler.
+    private func setSubscribers() {
+        
+        // 2) Set up the event handler.
+        soapEventSubscription = eventSession.onDataReceived.sink { completion in
+            switch completion {
+                
+            case .finished:
+                break
+            case .failure(let error):
+                fatalError("Failure: \(error.description)")
+            }
+        } receiveValue: { jsonData in
+            
+            switch jsonData.sonosService {
+                
+            case .avTransport:
+                
+                parseJSONToObject(json: jsonData.json) { (avTransport: AVTransport?) in
+                    guard let avTransport else { return }
+                    if let albumURL = URL(string: self.selectedGroup.coordinatorURL.description + (avTransport.currentTrackMetaData?.albumArtURI ?? "")) {
+                        self.albumArtURL = albumURL
+                        
+                    } else {
+                        self.albumArtURL = nil
+                    }
+                    
+                    self.currentTrack = CurrentTrack(title: avTransport.currentTrackMetaData?.title ?? "", duration: avTransport.currentTrackDuration, artist: avTransport.currentTrackMetaData?.creator ?? "", album: avTransport.currentTrackMetaData?.album ?? "")
+                }
+                
+            case .groupRenderingControl:
+                
+                parseJSONToObject(json: jsonData.json) { (groupRenderingControl: GroupRenderingControl?) in
+                    guard let groupRenderingControl else { return }
+                    
+                    self.groupVolume = groupRenderingControl.groupVolume
+                }
+                
+            default:
+                break
+            }
         }
     }
     
@@ -145,10 +189,8 @@ final class SonosModel: ObservableObject {
     /// - Parameter id: Group ID
     func groupSelected(id: String) {
         if let group  = groups.first(where: { $0.id == id }) {
-            selectedGroup = group
             
-            // Remove current event subscription.
-            soapEventSubscription?.cancel()
+            selectedGroup = group
             process()
             
         } else {
@@ -188,52 +230,10 @@ final class SonosModel: ObservableObject {
         
         session.run()
         
-        
-        // 1) Select Sonos Coordinator that will publish events. Setting up will also unsubscribe from previously subscribed events.
-        eventSession.setup(hostURL: selectedGroup.coordinatorURL)
-        
-        // 2) Set up the event handler.
-        soapEventSubscription = eventSession.onDataReceived.sink { completion in
-            switch completion {
-                
-            case .finished:
-                break
-            case .failure(let error):
-                fatalError("Failure: \(error.description)")
-            }
-        } receiveValue: { jsonData in
-            
-            switch jsonData.sonosService {
-                
-            case .avTransport:
-                
-                parseJSONToObject(json: jsonData.json) { (avTransport: AVTransport?) in
-                    guard let avTransport else { return }
-                    
-                    if let albumURL = URL(string: self.selectedGroup.coordinatorURL.description +  (avTransport.currentTrackMetaData?.albumArtURI ?? "")) {
-                        self.albumArtURL = albumURL
-                    } else {
-                        self.albumArtURL = nil
-                    }
-                    
-                    self.currentTrack = CurrentTrack(title: avTransport.currentTrackMetaData?.title ?? "", duration: avTransport.currentTrackDuration, artist: avTransport.currentTrackMetaData?.creator ?? "", album: avTransport.currentTrackMetaData?.album ?? "")
-                }
-                
-            case .groupRenderingControl:
-                
-                parseJSONToObject(json: jsonData.json) { (groupRenderingControl: GroupRenderingControl?) in
-                    guard let groupRenderingControl else { return }
-                    
-                    self.groupVolume = groupRenderingControl.groupVolume
-                }
-                
-            default:
-                break
-            }
+        // 3) Subscribe to some Sonos events from the current Sonos Coordinator so we can be notified when there is an update - e.g. track, volume change. Note that subscribing to events also unsubscribe from previously subscribed events.
+        Task {
+            await  eventSession.subscribeToEvents(events: [.subscription(service: .avTransport), .subscription(service: .groupRenderingControl)], hostURL: selectedGroup.coordinatorURL)
         }
-        
-        // 3) Subscribe to some Sonos events from the current Sonos Coordinator so we can be notified when there is an update - e.g. track, volume change. Note that subscribing to events add those subscriptions to those already there (i.e. do not replace them.)
-        eventSession.subscribeToEvents(events: [.subscription(service: .avTransport), .subscription(service: .groupRenderingControl)])
-        
+
     }
 }

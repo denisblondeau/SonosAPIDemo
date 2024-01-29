@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/denisblondeau/SonosAPI",
       "state" : {
-        "revision" : "2a67deed0f0d909396d1cfb609b44d798f38c83c",
-        "version" : "1.0.3"
+        "branch" : "main",
+        "revision" : "6f8d40204b0cc08ab4c9857452689f79ac3f704a"
       }
     }
   ],
